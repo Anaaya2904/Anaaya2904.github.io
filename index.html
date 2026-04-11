@@ -47,6 +47,7 @@
             border-bottom: 2px solid var(--accent);
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
+            margin-top: 2rem;
         }
         .card {
             background-color: var(--card-bg);
@@ -63,6 +64,56 @@
         .card p {
             color: var(--text-muted);
         }
+        
+        /* Photo Journal Styles */
+        .journal-entry {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+        .journal-date {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .journal-text {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #334155;
+            padding-left: 1rem;
+            font-style: italic;
+            color: #cbd5e1;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+        }
+        .caption {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
         .button-group {
             display: flex;
             gap: 12px;
@@ -141,6 +192,38 @@
                     <a href="https://medium.com/@anaayamashru/two-suns-one-planet-and-a-python-script-the-validation-of-toi-4633-c-7aaec8849075" target="_blank" class="btn">Read on Medium</a>
                     <a href="https://docs.google.com/document/d/1XHwd6fTY9xeIGrxf3TNxOxrne7CoXi1qePRcWJGFjlE/edit?tab=t.0" target="_blank" class="btn btn-secondary">Formal Research Summary</a>
                     <a href="https://colab.research.google.com/drive/1lA-N4gG9Rzbm2rNZehLyPqy9r4JxBR0n#scrollTo=q1nPm_Td2TCW" target="_blank" class="btn btn-secondary">View Python Code</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">The Cosmic Perspective: Field Journal</h2>
+            
+            <div class="journal-entry">
+                <div class="journal-date">April 10, 2026 | Chabot Space & Science Center & NASA Ames</div>
+                <h3>Return to the Moon: The Artemis II Briefing</h3>
+                <p class="journal-text">"To look up is humanity's oldest pastime, but to reach up is our greatest achievement. Today, I had the privilege of witnessing the culmination of that reach."</p>
+                <p>Data pipelines and light curves tell us what exists light-years away, but true space exploration requires bending metal, calculating chaotic orbital mechanics, and bringing humans safely home. Today, I attended a profound briefing at the Chabot Space Center, hearing directly from the aerospace engineers behind the Artemis II mission and the Director of NASA Ames. Watching the breakdown of the Orion spacecraft's Trans-Lunar Injection and the sheer physics of a 24,000 mph atmospheric re-entry on the dome was a stark reminder of the engineering reality that underpins all astrophysical theory. We are going back to the Moon, and this time, we are staying.</p>
+                
+                <div class="gallery">
+                    <div><img src="IMG_1001.jpeg" alt="Anaaya at NASA Ames Visitor Center"><div class="caption">NASA Ames Visitor Center</div></div>
+                    <div><img src="IMG_0996.jpeg" alt="Selfie with Artemis Projection"><div class="caption">Chabot Space & Science Center Dome</div></div>
+                    <div><img src="IMG_0988.jpg" alt="Artemis Logo"><div class="caption">Artemis II Briefing</div></div>
+                    <div><img src="IMG_0990.jpg" alt="Mission Architecture Briefing Wide"><div class="caption">Mission Director Briefing</div></div>
+                    <div><img src="IMG_0989.jpeg" alt="Aerospace Engineering Speaker"><div class="caption">Architecture & Logistics</div></div>
+                    
+                    <div><img src="b1770044-6d02-489e-841d-41c0830fc1d0.jpg" alt="Artemis II on Launch Pad"><div class="caption">Space Launch System (SLS)</div></div>
+                    <div><img src="cb0dba13-64ce-43a4-a753-5509e2d6be37.jpg" alt="Major Mission Milestones"><div class="caption">Orbital Mechanics & Trans-Lunar Injection</div></div>
+                    <div><img src="174c2dc3-6efb-48c8-9d83-6f885878522e.jpg" alt="Foundation for Deep Space"><div class="caption">Deep Space Infrastructure</div></div>
+                    <div><img src="IMG_3973.JPG" alt="Orion Spacecraft Schematic"><div class="caption">Orion Spacecraft Architecture</div></div>
+                    <div><img src="ac701f1e-3045-4a67-8c10-ce506fc3ad0e.jpg" alt="Orion Module Breakdown"><div class="caption">Crew & Service Module Separation</div></div>
+
+                    <div><img src="1c292fed-2b1d-48d0-9e5d-b6a570453bd7.jpg" alt="Entry, Descent, Landing sequence"><div class="caption">Entry, Descent & Landing (EDL)</div></div>
+                    <div><img src="IMG_0994.jpg" alt="Re-entry Telemetry"><div class="caption">Atmospheric Re-entry (24,800+ mph)</div></div>
+                    <div><img src="IMG_0995.jpeg" alt="Capsule falling"><div class="caption">Forward Bay Cover Jettison</div></div>
+                    <div><img src="IMG_1574.JPG" alt="Audience watching parachutes"><div class="caption">Pilot Parachute Deployment</div></div>
+                    <div><img src="IMG_0991.JPG" alt="Time to splashdown telemetry"><div class="caption">Terminal Descent Telemetry</div></div>
+                    <div><img src="a1624f87-e510-46ba-8aed-785724d6b14e.jpg" alt="Splashdown Recovery"><div class="caption">Splashdown & Naval Recovery</div></div>
                 </div>
             </div>
         </section>

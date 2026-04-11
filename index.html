@@ -37,43 +37,49 @@
         .section { margin-bottom: 60px; }
         h2 { border-left: 4px solid var(--nebula-blue); padding-left: 15px; margin-bottom: 25px; }
 
-        /* Project Card Styling */
+        /* Research Card Styling */
         .project-card {
             background: #161b22;
             padding: 30px;
             border-radius: 12px;
             border: 1px solid #30363d;
+            margin-bottom: 20px;
         }
 
-        /* Medium Article Callout */
-        .medium-feature {
-            background: linear-gradient(145deg, #1e232b, #161b22);
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid var(--nebula-blue);
-            margin-bottom: 30px;
+        .link-group {
+            margin-top: 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
+        /* Buttons */
         .btn {
             background-color: var(--nebula-blue);
             color: white;
-            padding: 10px 20px;
+            padding: 10px 18px;
             text-decoration: none;
             border-radius: 6px;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 0.9rem;
             transition: 0.3s;
+            display: inline-block;
         }
 
-        .btn:hover { opacity: 0.8; }
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--nebula-blue);
+            color: var(--nebula-blue);
+        }
+
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
 
         /* Gallery Grid */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
+            margin-top: 20px;
         }
 
         .gallery img {
@@ -81,11 +87,9 @@
             height: 200px;
             object-fit: cover;
             border-radius: 8px;
-            filter: grayscale(20%);
             transition: 0.3s;
+            background: #333; /* Placeholder for broken images */
         }
-
-        .gallery img:hover { filter: grayscale(0%); transform: scale(1.02); }
 
         footer { text-align: center; font-size: 0.9rem; color: #8b949e; margin-top: 100px; }
     </style>
@@ -102,35 +106,37 @@
         <h2>Primary Research</h2>
         <div class="project-card">
             <h3>TOI-4633 c: Automated Exoplanet Validation</h3>
-            <p>Developed a Python-based pipeline using <strong>Box Least Squares (BLS) periodograms</strong> to detect and validate transits in TESS light curves. Successfully confirmed the 271.5-day orbit of TOI-4633 c in a complex binary star system.</p>
-            <p><strong>Technical Stack:</strong> Python, Lightkurve, Matplotlib, NumPy.</p>
+            <p>Built a Python pipeline utilizing <strong>Box Least Squares (BLS) periodograms</strong> to identify and validate exoplanetary transits. Successfully confirmed the Habitable Zone placement and 271.5-day orbit of TOI-4633 c.</p>
+            
+            <div class="link-group">
+                <a href="https://colab.research.google.com/drive/YOUR_LINK" class="btn" target="_blank">View Python Code (Colab)</a>
+                <a href="https://docs.google.com/document/d/YOUR_LINK" class="btn btn-outline" target="_blank">Full Research Doc</a>
+            </div>
         </div>
     </section>
 
     <section class="section">
         <h2>Field Journal: Artemis II Briefing</h2>
         
-        <div class="medium-feature">
-            <div>
-                <h3 style="margin:0;">Latest Publication</h3>
-                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#8b949e;">Beyond the Light Curve: Engineering Reality at the Artemis II Briefing</p>
-            </div>
-            <a href="https://medium.com/@anaayamashru/beyond-the-light-curve-engineering-reality-at-the-artemis-ii-briefing-ffb35ae5b430" class="btn" target="_blank">Read on Medium</a>
+        <div class="project-card" style="border-color: var(--nebula-blue);">
+            <h3>Reflections on Artemis II Splashdown</h3>
+            <p>An informational analysis of the briefing at Chabot Space & Science Center, connecting computational astrophysics to NASA Ames’s engineering infrastructure.</p>
+            <a href="https://medium.com/@anaayamashru/beyond-the-light-curve-engineering-reality-at-the-artemis-ii-briefing-ffb35ae5b430" class="btn" target="_blank">Read Article on Medium</a>
         </div>
 
         <div class="gallery">
-            <img src="Briefing_1.jpg" alt="NASA Ames Director Dr. Eugene Tu">
-            <img src="Briefing_2.jpg" alt="Orion Engineer Parul Agrawal">
-            <img src="Briefing_3.jpg" alt="Artemis II Mission Architecture">
-            <img src="Briefing_4.jpg" alt="Chabot Space & Science Center">
-            <img src="Briefing_5.jpg" alt="Orion Heat Shield Schematic">
-            <img src="Briefing_6.jpg" alt="Splashdown Telemetry">
-            <img src="Briefing_7.jpg" alt="Ames Arc Jet Presentation">
-            <img src="Briefing_8.jpg" alt="SLS Rocket Discussion">
-            <img src="Briefing_9.jpg" alt="Mission Control Simulation">
-            <img src="Briefing_10.jpg" alt="Briefing Audience Q&A">
-            <img src="Briefing_11.jpg" alt="Artemis II Crew Profile">
-            <img src="Briefing_12.jpg" alt="Final Splashdown View">
+            <img src="Briefing_1.jpg" alt="Briefing Photo 1">
+            <img src="Briefing_2.jpg" alt="Briefing Photo 2">
+            <img src="Briefing_3.jpg" alt="Briefing Photo 3">
+            <img src="Briefing_4.jpg" alt="Briefing Photo 4">
+            <img src="Briefing_5.jpg" alt="Briefing Photo 5">
+            <img src="Briefing_6.jpg" alt="Briefing Photo 6">
+            <img src="Briefing_7.jpg" alt="Briefing Photo 7">
+            <img src="Briefing_8.jpg" alt="Briefing Photo 8">
+            <img src="Briefing_9.jpg" alt="Briefing Photo 9">
+            <img src="Briefing_10.jpg" alt="Briefing Photo 10">
+            <img src="Briefing_11.jpg" alt="Briefing Photo 11">
+            <img src="Briefing_12.jpg" alt="Briefing Photo 12">
         </div>
     </section>
 

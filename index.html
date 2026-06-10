@@ -117,6 +117,66 @@
             border-top: 1px solid #30363d;
         }
 
+        /* ========================================== */
+        /* NEW BLOG SECTION STYLES                    */
+        /* ========================================== */
+        .blog-card {
+            background: #161b22;
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid #30363d;
+            border-left: 4px solid var(--nebula-blue);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--nebula-blue);
+        }
+
+        .blog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .blog-date {
+            color: #8b949e;
+            font-weight: 500;
+        }
+
+        .blog-tag {
+            background-color: #30363d;
+            color: var(--nebula-blue);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-title {
+            font-size: 1.6rem;
+            color: var(--star-white);
+            margin: 0 0 15px 0;
+            line-height: 1.3;
+        }
+
+        .blog-content p {
+            color: #c9d1d9;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .blog-content p:last-child {
+            margin-bottom: 0;
+        }
+
         footer { text-align: center; font-size: 0.9rem; color: #8b949e; margin-top: 100px; }
     </style>
 </head>
@@ -201,6 +261,27 @@
                 <div class="caption">Final Splashdown Success</div>
             </div>
         </div>
+    </section>
+
+    <section class="section" id="blog">
+        <h2>Cosmic Logs & Reflections</h2>
+        
+        <article class="blog-card">
+            <div class="blog-header">
+                <span class="blog-date">June 2026</span>
+                <span class="blog-tag">Book Reflection</span>
+            </div>
+            <h3 class="blog-title">Shaking Up My Cosmic Common Sense</h3>
+            <div class="blog-content">
+                <p>When I first started writing Python pipelines to hunt for exoplanets, I felt like I had the universe entirely figured out. To me, astrophysics was the ultimate logical puzzle. You download the raw data from a space telescope, clean up the stellar noise, and let math do the heavy lifting. Physics is just math, and math is pure logic. If my code followed a rational, step-by-step structure, the universe would logically reveal its secrets. It was a comfortable, orderly way to look at the cosmos.</p>
+                
+                <p>Then, I picked up Neil deGrasse Tyson’s <em>To Infinity and Beyond</em>, and one specific concept completely derailed my clean, orderly worldview. Tyson points out a humbling reality about how we view space: our everyday human logic and "common sense" mean absolutely nothing to the universe.</p>
+                
+                <p>It was a bizarre contradiction to sit with. How could a field so deeply rooted in physics and math defy logic? But as I read on, the pieces started falling into place. Our human brains evolved to survive on Earth—interpreting intuitive, everyday physics like a hockey puck sliding across a rink. The universe, however, operates on scales that our terrestrial brains were never wired to understand. When you look at the quantum scale, particles can exist in two places at once. When you look at massive stars, gravity literally bends time. None of that is "logical" to a human being.</p>
+
+                <p>It made me realize that trying to force the universe to fit into our tiny box of human intuition is holding us back. To truly discover what is out there, we have to rely on tools that don't suffer from human bias—like the data pipelines and light curves I’m building in my club projects. This book helped me expand past the basic thinking and face the harsh truth that common sense won't get us far in universe discovery.</p>
+            </div>
+        </article>
     </section>
 
     <footer>
